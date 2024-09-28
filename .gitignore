@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Build artifacts
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Mac OS specific files
+.DS_Store
+
+# TypeScript related (if applicable)
+*.tsbuildinfo
