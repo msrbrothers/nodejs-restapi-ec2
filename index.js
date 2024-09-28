@@ -5,7 +5,7 @@ let users = require('./data'); // Simulated database
 dotenv.config(); // Load environment variables
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON requests
 app.use(express.json());
