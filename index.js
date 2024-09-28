@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 // GET all users
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
   res.json(users);
 });
 
