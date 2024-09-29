@@ -16,7 +16,7 @@ app.get('/api/users', (req, res) => {
 });
 
 // GET a single user by ID
-app.get('/users/:id', (req, res) => {
+app.get('/api/users/:id', (req, res) => {
   const userId = parseInt(req.params.id);
   const user = users.find((u) => u.id === userId);
   if (user) {
@@ -27,7 +27,7 @@ app.get('/users/:id', (req, res) => {
 });
 
 // CREATE a new user
-app.post('/users', (req, res) => {
+app.post('/api/users', (req, res) => {
   const newUser = {
     id: users.length + 1,
     name: req.body.name,
@@ -38,7 +38,7 @@ app.post('/users', (req, res) => {
 });
 
 // UPDATE a user
-app.put('/users/:id', (req, res) => {
+app.put('/api/users/:id', (req, res) => {
   const userId = parseInt(req.params.id);
   const userIndex = users.findIndex((u) => u.id === userId);
   if (userIndex !== -1) {
@@ -50,7 +50,7 @@ app.put('/users/:id', (req, res) => {
 });
 
 // DELETE a user
-app.delete('/users/:id', (req, res) => {
+app.delete('/api/users/:id', (req, res) => {
   const userId = parseInt(req.params.id);
   users = users.filter((u) => u.id !== userId);
   res.status(204).send(); // No content
